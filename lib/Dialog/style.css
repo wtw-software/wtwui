@@ -68,7 +68,14 @@
   font-size: 16px;
   padding: 0px;
   margin: 0px;
-  margin-top: -5px;
+  padding: 15px 15px 0px 15px;
+}
+
+.wtwui-element .content {
+  width: 100%;
+  padding: 17px 0px 15px 0px;
+  color: #4c4c4c;
+  padding: 15px;
 }
 
 .wtwui-element .close {
@@ -78,13 +85,42 @@
   padding: 0px;
   margin: 0px;
   font-weight: bold;
-  margin-top: -7px;
+  line-height: 10px;
+  margin-top: 10px;
+  margin-right: 11px;
   opacity: 0.5;
   -webkit-transition: opacity 0.15s, text-shadow 0.15s;
   -moz-transition: opacity 0.15s, text-shadow 0.15s;
   -ms-transition: opacity 0.15s, text-shadow 0.15s;
   -o-transition: opacity 0.15s, text-shadow 0.15s;
   transition: opacity 0.15s, text-shadow 0.15s;
+}
+
+.wtwui-element .buttons {
+  background: #f9f9f9;
+  height: 29px;
+  padding: 5px;
+  border-top: 1px solid #ECECEC;
+}
+
+
+.wtwui-element .buttons button {
+  display: inline-block;
+  float: right;
+  padding: 5px 7px 5px 7px;
+  border-radius: 3px;
+  border: 1px solid #DFDFDF;
+  background: white;
+  box-shadow: 1px 1px 0px 0px rgba(20,20,20, 0.3); 
+}
+
+.wtwui-element .buttons .button.cancel {
+  
+}
+
+.wtwui-element .buttons button:active {
+  box-shadow: 1px 1px 2px 0px rgba(20,20,20, 0.1); 
+  -webkit-transform: translate(1px, 1px);
 }
 
 .wtwui-element .close:hover {
@@ -101,14 +137,6 @@
   border-bottom-color: rgba(30,30,30, 0.27);
   border-radius: 2px;
   width: 360px;
-  padding: 10px;
 }
 
-
-
-.wtwui-dialog .content {
-  width: 100%;
-  padding: 10px 0px 1px 0px;
-  color: #4c4c4c;
-}
 

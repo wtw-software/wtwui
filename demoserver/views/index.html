@@ -20,40 +20,52 @@
       'lib'
     ], function(wtwui) {
       
-     window.wtwui = wtwui
+      window.wtwui = wtwui
 
 
-       
-       var dialog = new wtwui.Dialog({
-         title: 'lolsdialog',
-         content: 'lolscontent of this dialog bpx',
-         effect: 'drop'
-       }).show()
+      wtwui.confirm('Are you sure?', function(ok) {
+        if(ok) {
+          console.log('okd');
+        } else {
+          console.log('canceled');
+        }
+      })
 
-       setTimeout(function() {
-         var dialog = new wtwui.Dialog({
-           title: 'lolsdialog',
-           content: 'lolscontent of this dialog bpx',
-           effect: 'drop'
-         }).show()         
+      wtwui.confirm('Remove user', 'Are you sure?', function(ok) {
+        if(ok) {
+          console.log('okd');
+        } else {
+          console.log('canceled');
+        }
+      })
 
-         setTimeout(function() {
-           var dialog = new wtwui.Dialog({
-             title: 'lolsdialog',
-             content: 'lolscontent of this dialog bpx',
-             effect: 'drop'
-           }).show()         
-         },300)
+      wtwui.confirm(function(ok) {
+        if(ok) {
+          console.log('okd');
+        } else {
+          console.log('canceled');
+        }
+      })
 
-         setTimeout(function() {
-           var dialog = new wtwui.Dialog({
-             title: 'lolsdialog',
-             content: 'lolscontent of this dialog bpx',
-             effect: 'drop'
-           }).show()         
-         },300)
+      return 
+      conf = new wtwui.Confirmation({
+        title: 'Remove User',
+        message: 'Are you sure?',
+        effect: 'drop'
+      })
+      .ok(function() {
+        console.log('okd');
+      })
+      .cancel(function() {
+        console.log('canceled');
+      })
+      .show()
 
-       },300)
+
+
+      
+
+      
 
 
     })
