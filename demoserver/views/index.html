@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title></title>
+
+  <link href="lib/Dialog/style.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="lib/vendor/require.js"> </script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    
+    require.config({
+      packages: [
+        'lib'
+      ]
+    })
+    
+    require([
+      'lib'
+    ], function(wtwui) {
+      
+     window.wtwui = wtwui
+
+
+       
+       var dialog = new wtwui.Dialog({
+         title: 'lolsdialog',
+         content: 'lolscontent of this dialog bpx',
+         effect: 'drop'
+       }).show()
+
+       setTimeout(function() {
+         var dialog = new wtwui.Dialog({
+           title: 'lolsdialog',
+           content: 'lolscontent of this dialog bpx',
+           effect: 'drop'
+         }).show()         
+
+         setTimeout(function() {
+           var dialog = new wtwui.Dialog({
+             title: 'lolsdialog',
+             content: 'lolscontent of this dialog bpx',
+             effect: 'drop'
+           }).show()         
+         },300)
+
+         setTimeout(function() {
+           var dialog = new wtwui.Dialog({
+             title: 'lolsdialog',
+             content: 'lolscontent of this dialog bpx',
+             effect: 'drop'
+           }).show()         
+         },300)
+
+       },300)
+
+
+    })
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

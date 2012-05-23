@@ -1,0 +1,21 @@
+{
+  "author": "Jørn Andre Tangen <jornandretangen@gmail.com>",
+  "name": "wtwui",
+  "description": "WtW UI components",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andtan/TimeTrial.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "~0.6.17"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-node": "1.0.17 "
+  },
+  "scripts": {
+    "test": "jasmine-node ./tests"
+  }
+}
