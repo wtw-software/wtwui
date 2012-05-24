@@ -4,6 +4,7 @@
 
   <link href="lib/Dialog/style.css" media="screen" rel="stylesheet" type="text/css">
   <link href="lib/Overlay/style.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="lib/Tip/style.css" media="screen" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="lib/vendor/require.js"> </script>
 
@@ -23,39 +24,29 @@
       
       window.wtwui = wtwui
 
-      wtwui.confirm('title', 'Are you sure?', function() {
-        console.log(arguments);
+     
+      return
+      ;([
+        'south',
+        'south-west',
+        'south-east',
+        'north',
+        'north-east',
+        'north-west',
+        'east',
+        'west'
+      ]). forEach(function(pos) {
+        window.tip = new wtwui.Tip({
+          target: $('#tip-target'),
+          content: 'tooltip motherfucker',
+          position: pos
+        }).show()
       })
-        
-
-      
-      new wtwui.Dialog({
-        title: 'Thats right',
-        message: 'Dialog bitches'
-      })
-      .overlay()
-      .show()
-
-      new wtwui.Dialog({
-        title: 'Something erroneous has happened',
-        message: 'oh noes'
-      })
-      .overlay({
-        css: {
-          background: 'red'
-        }
-      })
-      .show()
 
 
 
       
 
-
-
-      
-
-      
 
 
     })
@@ -63,6 +54,8 @@
 
 </head>
 <body>
+
+  <div id="tip-target" style="border: 1px solid gray; width: 500px; height: 50px; margin: 500px 0px 0px 500px"></div>
 
 </body>
 </html>

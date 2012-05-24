@@ -1,0 +1,79 @@
+
+.wtwui-tip {
+  position: absolute;
+  z-index: 9989;
+}
+
+.wtwui-tip.fade {
+  opacity: 1;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -mstransition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.wtwui-tip.fade.hidden {
+  opacity: 0;
+}
+
+.wtwui-tip .content {
+  position: relative;
+  border: 1px solid gray;
+  padding: 5px 10px 5px 10px;
+  font: 14px/1.6 'Helvetica Neue', Helvetica, arial, sans-serif;
+  box-shadow: 0px 0px 4px 0px rgba(30,30,30, 0.2);
+  border: 1px solid rgba(30,30,30, 0.23);
+  border-bottom-color: rgba(30,30,30, 0.27);
+  border-radius: 3px;
+  background: white;
+  color: #444;
+}
+
+.wtwui-tip .tip {
+  position:absolute;
+  height: 6px;
+  width: 6px;
+  border:solid;
+  border-color: rgba(30,30,30, 0.33) transparent;
+  background: whitesmoke;
+  box-shadow: 0px 0px 4px 0px rgba(30,30,30, 0.2);
+  border: 1px solid rgba(30,30,30, 0.23);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.wtwui-tip .tip.north {
+  bottom: -3px;
+}
+
+.wtwui-tip .tip.south {
+  top: -3px;
+}
+
+.wtwui-tip .tip.east {
+  left: -3px;
+}
+
+.wtwui-tip .tip.west {
+  right: -3px;
+}
+
+.wtwui-tip .tip.north.east {
+  left: 20px;
+}
+
+.wtwui-tip .tip.north.west {
+  right: 20px;
+}
+
+.wtwui-tip .tip.south.east {
+  left: 20px;
+}
+
+.wtwui-tip .tip.south.west {
+  right: 20px;
+}
