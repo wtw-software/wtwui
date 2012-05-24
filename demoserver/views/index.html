@@ -3,6 +3,7 @@
   <title></title>
 
   <link href="lib/Dialog/style.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="lib/Overlay/style.css" media="screen" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="lib/vendor/require.js"> </script>
 
@@ -23,43 +24,27 @@
       window.wtwui = wtwui
 
 
-      wtwui.confirm('Are you sure?', function(ok) {
-        if(ok) {
-          console.log('okd');
-        } else {
-          console.log('canceled');
-        }
-      })
-
-      wtwui.confirm('Remove user', 'Are you sure?', function(ok) {
-        if(ok) {
-          console.log('okd');
-        } else {
-          console.log('canceled');
-        }
-      })
-
-      wtwui.confirm(function(ok) {
-        if(ok) {
-          console.log('okd');
-        } else {
-          console.log('canceled');
-        }
-      })
-
-      return 
-      conf = new wtwui.Confirmation({
-        title: 'Remove User',
-        message: 'Are you sure?',
-        effect: 'drop'
-      })
-      .ok(function() {
-        console.log('okd');
-      })
-      .cancel(function() {
-        console.log('canceled');
+      new wtwui.Confirmation({
+        message: 'lol'
       })
       .show()
+
+
+
+
+      return
+      new wtwui.Dialog({
+        message: 'in overlay'
+      })
+      .overlay()
+      .show()
+
+      new wtwui.Dialog({
+        message: 'outside overlay'
+      })
+      .show()
+
+      
 
 
 
