@@ -23,26 +23,31 @@
       
       window.wtwui = wtwui
 
-
-      new wtwui.Confirmation({
-        message: 'lol'
+      wtwui.confirm('title', 'Are you sure?', function() {
+        console.log(arguments);
       })
-      .show()
+        
 
-
-
-
-      return
+      
       new wtwui.Dialog({
-        message: 'in overlay'
+        title: 'Thats right',
+        message: 'Dialog bitches'
       })
       .overlay()
       .show()
 
       new wtwui.Dialog({
-        message: 'outside overlay'
+        title: 'Something erroneous has happened',
+        message: 'oh noes'
+      })
+      .overlay({
+        css: {
+          background: 'red'
+        }
       })
       .show()
+
+
 
       
 
