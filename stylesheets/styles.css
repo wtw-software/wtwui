@@ -253,3 +253,29 @@ footer {
     color:#444;
   }
 }
+
+.demo {
+  float: right;
+  padding: 5px;
+  border: 1px solid #dbdbdb;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.demo.dialog {
+  background-image: url('dialog.png');
+}
+
+.demo.confirmation {
+  background-image: url('confirmation.png');
+}
+
+
+
+
+
