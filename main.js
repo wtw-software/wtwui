@@ -1,11 +1,6 @@
 require(
-  {
-    packages: [
-      'lib'
-    ]
-  },
   [
-    'lib'
+    'lib/main'
   ],
 function(wtwui) {
   

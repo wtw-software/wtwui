@@ -188,10 +188,6 @@ new wtwui.Overlay({
   content: $('<i> or even an jquery object </i>')
 }).show()
 
-// or
-
-new wtwui.Overlay('content string, html or jquery').show()
-
 ```
 
 ## wtwui.Tip
