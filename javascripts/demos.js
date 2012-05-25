@@ -133,6 +133,39 @@ $(document).ready(function() {
 
   })
 
+  var demos = [
+    $('#basic-dialog'),
+    $('#basic-dialog-chaining'),
+    $('#basic-dialog-shorthand'),
+    $('#basic-confirmation'),
+    $('#basic-confirmation-shorthand'),
+    $('#basic-overlay'),
+    $('#basic-overlay-dialog'),
+    $('#basic-tip'),
+    $('#basic-tip-hover')
+  ]
+
+  var active = {
+      
+  }
+
+  var el = $('#basic-dialog')
+  var activeTip = null
+  $(window).bind('scroll', function() {
+    var poss = el.offset().top - $(window).scrollTop()
+    if(poss < 320 && poss > -320 && !activeTip) {
+      activeTip = new wtwui.Tip({
+        content: 'demo',
+        target: el,
+        position: 'east',
+      }).show()
+    } else if(poss > 320 || poss < -320) {
+      if(activeTip) {
+        activeTip.hide() 
+      }
+      activeTip = false
+    }
+  })
 
   wtwui.tip('#basic-tip-hover', 'floaty', 'east').hover()
 
