@@ -26,11 +26,12 @@
       
       window.wtwui = wtwui
 
-      new wtwui.Dialog({
-        title: 'lol',
-        message: 'haha',
-        overlay: true
-      }).show()
+      var tip = new wtwui.Tip({
+        content: 'tooltip orama',
+        target: '#tip-target'
+      })
+
+      tip.hover()
       
 
     })

@@ -1,5 +1,6 @@
 
 # wtwui
+Is a ui library with our most commonly used ui gadgets.
 
 ## Dependencies
 At the moment you need `jquery` and `requirejs` to use the project. There could be an option to build the project without requirejs if the need arises.
@@ -62,15 +63,6 @@ wtwui.dialog({
 })
 ```
 
-The function allso returns an instance of wtwui.Dialog so that it can be further manipulated.
-
-```javascript
-var dialog = wtwui.dialog('title', 'message')
-
-dialog.on('hide', function(){
-  console.log('user closed the dialog')
-})
-```
 
 ## wtwui.Confirmation
 Confirmation boxes are dialogs that gives the user two options: ok or cancel. You can pass most of the same parameters as with dialogs.
@@ -107,7 +99,7 @@ confirmation.show()
 ```
 
 #### confirm shorthand
-By using the shorthand the confirmation is shown immediately
+By using the shorthand the confirmation is shown immediately, the function return an instance of wtwui.Confirmation
 
 ```javascript
 wtwui.confirm('Delete user', 'Are you sure', function(ok){
@@ -209,7 +201,31 @@ new wtwui.Overlay({
 ```
 
 ## wtwui.Tip
-Basic tooltip.
+Basic vanilla flavoured tooltip.
+
+```javascript
+var tip = new wtwui.Tip({
+  content: 'tooltip orama',
+  target: '#tip-target'
+})
+
+tip.show()
+```
+
+#### Hover
+You can make the tooltip trigger on hover. The hover target defaults to the target assigned to tooltip. Or you can designate a custom target.
+```javascript
+var tip = new wtwui.Tip({
+  content: 'tooltip orama',
+  target: '#tip-target'
+})
+
+tip.hover()
+//or
+tip.hover('#another-target')
+```
+
+
 
 
 ## License
