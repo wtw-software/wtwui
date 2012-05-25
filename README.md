@@ -23,12 +23,12 @@ Creating a dialog box can be done using one of two patterns. Dialog class instan
 
 ```javascript
 var dialog = new wtwui.Dialog({
-  title: 'title of the dialog',
-  message: 'lol noob'
+  title: 'Dialog yeeeeah',
+  message: 'Its slick allright'
 })
 
 dialog.on('show', function() {
-  console.log('the userwas presented a dialog box');
+  console.log('the user was presented a dialog box');
 })
 
 dialog.show()
@@ -37,18 +37,19 @@ dialog.on('hide', function() {
   console.log('user closed the dialog');
 })
 
-dialog.hide()
 ```
 
 ##### Chaining
 
 ```javascript
 new wtwui.Dialog({
-  title: 'title of the dialog',
-  message: 'lol noob'
+  title: 'Dialog yeeeeah',
+  message: 'Its slick allright'
 })
 .show()
-.on('hide', dialogHidden)
+.on('hide', function(){
+  alert('alerts is so much better!')
+})
 ```
 
 #### dialog shorthand
