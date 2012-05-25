@@ -214,6 +214,7 @@ tip.show()
 
 #### Hover
 You can make the tooltip trigger on hover. The hover target defaults to the target assigned to tooltip. Or you can designate a custom target.
+
 ```javascript
 var tip = new wtwui.Tip({
   content: 'tooltip orama',
