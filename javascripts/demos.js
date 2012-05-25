@@ -2,8 +2,12 @@ $(document).ready(function() {
   
 
   var user = {
-    delete: function() {},
-    rollback: function() {}
+    delete: function() {
+      console.log('User Deleted!');
+    },
+    rollback: function() {
+      console.log('Rollbacked userdata');
+    }
   }
 
   $('#basic-dialog').click(function() {
@@ -44,6 +48,48 @@ $(document).ready(function() {
       message: 'using options like a boss'
     })
   })
+
+  $('#basic-confirmation').click(function() {
+    new wtwui.Confirmation({
+      title: 'Remove user',
+      message: 'Are you sure?',
+      ok: function() {
+        user.delete()
+      },
+      cancel: function() {
+        user.rollback()
+      }
+    }).show()
+  })
+
+
+  $('#basic-confirmation-shorthand').click(function() {
+    
+    wtwui.confirm('Delete user', 'Are you sure', function(ok){
+      if(ok)
+        user.delete()
+      else
+        user.rollback()
+    })
+
+    // or
+
+    wtwui.confirm('Are you sure you wwant to delete the user?', function(ok){
+      if(ok)
+        user.delete()
+      else
+        user.rollback()
+    })
+
+    wtwui.confirm('Delete user', 'are you sure')
+      .ok(function(){
+        user.delete()
+      })
+      .cancel(function(){
+        user.rollback()
+      })
+  })
+
 
 
 })
