@@ -226,6 +226,20 @@ tip.hover()
 tip.hover('#another-target')
 ```
 
+#### Shorthand
+The shorthand creates a tooltip and show it imediatly, the function return the wtwui.Tip instance.
+
+```javascript
+var tip = wtwui.tip('#tip-target', 'tooltip boii')
+setTimeout(function(){
+  tip.hide()
+}, 1000)
+
+//with hover
+wtwui.tip('#tip-target', 'tooltip boii').hover()
+wtwui.tip('#tip-target', 'tooltip boii').hover('#another-target')
+```
+
 
 
 
