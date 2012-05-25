@@ -276,3 +276,15 @@ footer {
   background-image: url('confirmation.png');
 }
 
+.demo.overlay {
+  background-image: url('overlay.png');
+}
+
+.demo.overlay-dialog {
+  background-image: url('overlay-dialog.png');
+}
+
+.demo.tip {
+  background-image: url('tip.png');
+}
+

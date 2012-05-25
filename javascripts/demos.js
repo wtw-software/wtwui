@@ -90,6 +90,52 @@ $(document).ready(function() {
       })
   })
 
+  $('#basic-overlay').click(function() {
+    var overlay = new wtwui.Overlay({
+      content: "<p style='opacity: 1; font-size: 40px; color: white; position: fixed; top: 200px; left: 45%'> Hides in 2 seconds.. </p>"
+    })
+    overlay.show()
+    setTimeout(function() {
+      overlay.hide()
+    }, 2000)
+  })
+
+  $('#basic-overlay-dialog').click(function() {
+    new wtwui.Dialog({
+      title: 'Thats right',
+      message: 'Dialog bitches'
+    })
+    .overlay()
+    .show()
+  })
+
+  $('#basic-tip').click(function() {
+    var tip = new wtwui.Tip({
+      content: 'Funky fresh tried and tested',
+      target: '#basic-tip',
+      position: 'north-west'
+    })
+
+    tip.show()
+
+    var tipB = new wtwui.Tip({
+      content: 'Smooooooosh',
+      target: '#tipster',
+      position: 'south-west'
+    })
+
+    tipB.show()
+
+    setTimeout(function() {
+      tip.hide()
+      tipB.hide()
+    }, 3000)
+
+  })
+
+
+  wtwui.tip('#basic-tip-hover', 'floaty', 'east').hover()
+
 
 
 })

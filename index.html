@@ -184,7 +184,7 @@
 <h2>wtwui.Overlay</h2>
 
 <p>An overlay covers the whole of the user view with a transparent box that you can place some content in. It can allso be used with the dialog of confirmation classes.</p>
-
+<div class="demo overlay" id="basic-overlay"></div>
 <div class="highlight">
 <pre><span class="kd">var</span> <span class="nx">overlay</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Overlay</span><span class="p">()</span>
 <span class="nx">overlay</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
@@ -203,6 +203,7 @@
 <h4>With dialog or confirmation</h4>
 
 <p>Overlay can be chained or passed as option into a dialog or confirmation box.</p>
+<div class="demo overlay-dialog" id="basic-overlay-dialog"></div>
 
 <div class="highlight">
 <pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
@@ -262,10 +263,10 @@
 </div>
 
 
-<h2>wtwui.Tip</h2>
+<h2 id="tipster">wtwui.Tip</h2>
 
 <p>Basic vanilla flavoured tooltip.</p>
-
+<div class="demo tip" id="basic-tip"></div>
 <div class="highlight">
 <pre><span class="kd">var</span> <span class="nx">tip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Tip</span><span class="p">({</span>
   <span class="nx">content</span><span class="o">:</span> <span class="s1">'tooltip orama'</span><span class="p">,</span>
@@ -280,7 +281,7 @@
 <h4>Hover</h4>
 
 <p>You can make the tooltip trigger on hover. The hover target defaults to the target assigned to tooltip. Or you can designate a custom target.</p>
-
+<div class="demo tip" id="basic-tip-hover"></div>
 <div class="highlight">
 <pre><span class="kd">var</span> <span class="nx">tip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Tip</span><span class="p">({</span>
   <span class="nx">content</span><span class="o">:</span> <span class="s1">'tooltip orama'</span><span class="p">,</span>
