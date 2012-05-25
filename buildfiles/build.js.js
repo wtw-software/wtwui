@@ -1,18 +1,18 @@
 ({
-  baseUrl: "../",
+  baseUrl: "../../",
   packages: [
-    'lib',
-    'lib/Dialog',
-    'lib/Confirmation',
-    'lib/Overlay',
-    'lib/Tip'
+    'wtwui',
+    'wtwui/lib/Dialog',
+    'wtwui/lib/Confirmation',
+    'wtwui/lib/Overlay',
+    'wtwui/lib/Tip'
   ],
   inlineText: true,
-  name: 'main',
+  name: 'wtwui',
   out: '../wtwui-min.js',
   wrap: {
     startFile: "start.frag",
     endFile: "end.frag"
   },
-  optimize: "uglify"
+  optimize: "none"
 })
