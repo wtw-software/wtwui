@@ -10,5 +10,5 @@
     startFile: "start.frag",
     endFile: "end.frag"
   },
-  optimize: "none"
+  optimize: "uglify"
 })
