@@ -2,17 +2,14 @@
   "author": "Jørn Andre Tangen <jornandretangen@gmail.com>",
   "name": "wtwui",
   "description": "WtW UI components gorillastyle",
-  "version": "0.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/andtan/TimeTrial.git"
-  },
-  "main": "lib/main.js",
+  "version": "0.0.1",
+  "main": "./main.js",
   "dependencies": {},
   "devDependencies": {
     "jasmine-node": "1.0.17 "
   },
   "scripts": {
-    "test": "jasmine-node ./tests"
+    "test": "jasmine-node ./tests",
+    "build": "node buildfiles/r.js -o buildfiles/build.js.js && node buildfiles/r.js -o buildfiles/build.css.js"
   }
 }
