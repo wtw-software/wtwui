@@ -55,12 +55,13 @@
 
 <div class="highlight">
 <pre><span class="kd">var</span> <span class="nx">dialog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
-  <span class="nx">title</span><span class="o">:</span> <span class="s1">'title of the dialog'</span><span class="p">,</span>
-  <span class="nx">message</span><span class="o">:</span> <span class="s1">'lol noob'</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Dialog yeeeeah'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Its slick allright'</span>
 <span class="p">})</span>
 
 <span class="nx">dialog</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'the userwas presented a dialog box'</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'the user was presented a dialog box'</span><span class="p">);</span>
+
 <span class="p">})</span>
 
 <span class="nx">dialog</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
@@ -69,20 +70,24 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'user closed the dialog'</span><span class="p">);</span>
 <span class="p">})</span>
 
-<span class="nx">dialog</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
 </pre>
 </div>
 
 
-<h5>Chaining</h5>
+<h4>Chaining</h4>
+<div class="demo dialog" id="basic-dialog-chaining"></div>
 
 <div class="highlight">
 <pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
-  <span class="nx">title</span><span class="o">:</span> <span class="s1">'title of the dialog'</span><span class="p">,</span>
-  <span class="nx">message</span><span class="o">:</span> <span class="s1">'lol noob'</span>
+
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Dialog yeeeeah'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Its slick allright'</span>
 <span class="p">})</span>
 <span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-<span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">,</span> <span class="nx">dialogHidden</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'alerts is so much better!'</span><span class="p">)</span>
+<span class="p">})</span>
+
 </pre>
 </div>
 
@@ -90,6 +95,7 @@
 <h4>dialog shorthand</h4>
 
 <p>This function created a new wtwui.Dialog instance and imediatly shows it.</p>
+<div class="demo dialog" id="basic-dialog-shorthand"></div>
 
 <div class="highlight">
 <pre><span class="nx">wtwui</span><span class="p">.</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">)</span>
@@ -107,7 +113,9 @@
 <p>Confirmation boxes are dialogs that gives the user two options: ok or cancel. You can pass most of the same parameters as with dialogs.</p>
 
 <h4>Creating a Confimation instance</h4>
+
 <div class="demo confirmation" id="basic-confirmation"></div>
+
 <div class="highlight">
 <pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Confirmation</span><span class="p">({</span>
   <span class="nx">title</span><span class="o">:</span> <span class="s1">'Remove user'</span><span class="p">,</span>
@@ -320,6 +328,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/wtwui-min.js"></script>

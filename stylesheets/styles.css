@@ -254,6 +254,7 @@ footer {
   }
 }
 
+
 .demo {
   float: right;
   padding: 5px;
@@ -274,8 +275,4 @@ footer {
 .demo.confirmation {
   background-image: url('confirmation.png');
 }
-
-
-
-
 
