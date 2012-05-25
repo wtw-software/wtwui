@@ -73,7 +73,7 @@ dialog.on('hide', function(){
 ```
 
 ## wtwui.Confirmation
-Confirmation boxes are dialogs that gived the user two options: ok or cancel. You can pass most of the same parameters as with dialogs.
+Confirmation boxes are dialogs that gives the user two options: ok or cancel. You can pass most of the same parameters as with dialogs.
 
 #### Creating a Confimation instance
 ```javascript
@@ -194,7 +194,8 @@ new wtwui.Overlay({
 Basic tooltip.
 
 
-## Licence
+## License
+wtwui uses the MIT license
 ```
 Copyright (C) <2012> <WTW software AS>
 
