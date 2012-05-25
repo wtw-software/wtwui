@@ -1,11 +1,7 @@
 ({
   baseUrl: "../../",
   packages: [
-    'wtwui',
-    'wtwui/lib/Dialog',
-    'wtwui/lib/Confirmation',
-    'wtwui/lib/Overlay',
-    'wtwui/lib/Tip'
+    'wtwui'
   ],
   inlineText: true,
   name: 'wtwui',

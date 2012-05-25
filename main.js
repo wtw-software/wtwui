@@ -1,18 +1,10 @@
-
-define({
-  packages: [
-    'wtwui/lib/Dialog',
-    'wtwui/lib/Confirmation',
-    'wtwui/lib/Overlay',
-    'wtwui/lib/Tip'
-  ]
-},[
+define([
 
   'wtwui/lib/Dialog',
   'wtwui/lib/Confirmation',
   'wtwui/lib/Overlay',
   'wtwui/lib/Tip'
-
+  
 ],function(Dialog, Confirmation, Overlay, Tip) {
   
   return {

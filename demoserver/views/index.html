@@ -2,11 +2,11 @@
 <head>
   <title></title>
 
-  <link href="wtwui/lib/Dialog/style.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="wtwui/lib/Overlay/style.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="wtwui/lib/Tip/style.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="gorillatron/progg/wtwui/lib/css/Dialog.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="gorillatron/progg/wtwui/lib/css/Overlay.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="gorillatron/progg/wtwui/lib/css/Tip.css" media="screen" rel="stylesheet" type="text/css">
 
-  <script type="text/javascript" src="wtwui/vendor/require.js"> </script>
+  <script type="text/javascript" src="gorillatron/progg/wtwui/vendor/require.js"> </script>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -16,13 +16,17 @@
     
     require({
       packages: [
-        'wtwui'
-        ]
+        {
+          name: 'wtwui',
+          location: 'gorillatron/progg/wtwui'
+        }
+      ]
       },
       [
-        'wtwui'
+        'wtwui',
+        'wtwui/lib/Dialog'
       ], 
-    function(wtwui) {
+    function(wtwui, Dialog) {
       
       window.wtwui = wtwui
 

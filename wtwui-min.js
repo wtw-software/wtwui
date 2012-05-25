@@ -234,15 +234,15 @@ c=c==="strip",a=a.substring(0,b));return{moduleName:f,ext:a,strip:c}},xdRegExp:/
 o,p,q)?e.get(h,function(c){e.finishLoad(a,d.strip,c,b,f)}):c([g],function(a){e.finishLoad(d.moduleName+"."+d.ext,d.strip,a,b,f)})}},write:function(a,c,b){if(j.hasOwnProperty(c)){var f=e.jsEscape(j[c]);b.asModule(a+"!"+c,"define(function () { return '"+f+"';});\n")}},writeFile:function(a,c,b,f,d){var c=e.parseName(c),g=c.moduleName+"."+c.ext,h=b.toUrl(c.moduleName+"."+c.ext)+".js";e.load(g,b,function(){var b=function(a){return f(h,a)};b.asModule=function(a,b){return f.asModule(a,h,b)};e.write(a,g,
 b,d)},d)}};if(e.createXhr())e.get=function(a,c){var b=e.createXhr();b.open("GET",a,!0);b.onreadystatechange=function(){b.readyState===4&&c(b.responseText)};b.send(null)};else if(typeof process!=="undefined"&&process.versions&&process.versions.node)l=require.nodeRequire("fs"),e.get=function(a,c){var b=l.readFileSync(a,"utf8");b.indexOf("\ufeff")===0&&(b=b.substring(1));c(b)};else if(typeof Packages!=="undefined")e.get=function(a,c){var b=new java.io.File(a),f=java.lang.System.getProperty("line.separator"),
 b=new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(b),"utf-8")),d,e,h="";try{d=new java.lang.StringBuffer;(e=b.readLine())&&e.length()&&e.charAt(0)===65279&&(e=e.substring(1));for(d.append(e);(e=b.readLine())!==null;)d.append(f),d.append(e);h=String(d.toString())}finally{b.close()}c(h)};return e})})();
-define('wtwui/lib/text!wtwui/lib/Dialog/template.html',[],function () { return '<div class="wtwui-dialog wtwui-element">\n  <h1 class="title"></h1>\n  <div class="close">×</div>\n  <div class="content"></div>\n  <div class="buttons">\n    \n  </div>\n</div>';});
+define('wtwui/lib/text!wtwui/lib/templates/Dialog.html',[],function () { return '<div class="wtwui-dialog wtwui-element">\n  <h1 class="title"></h1>\n  <div class="close">×</div>\n  <div class="content"></div>\n  <div class="buttons">\n    \n  </div>\n</div>';});
 
-define('wtwui/lib/text!wtwui/lib/Overlay/template.html',[],function () { return '<div class="wtwui-overlay"></div>';});
+define('wtwui/lib/text!wtwui/lib/templates/Overlay.html',[],function () { return '<div class="wtwui-overlay"></div>';});
 
 define('wtwui/lib/Overlay',[
 
   'wtwui/lib/classextends',
   'wtwui/lib/EventEmitter',
-  'wtwui/lib/text!wtwui/lib/Overlay/template.html'
+  'wtwui/lib/text!wtwui/lib/templates/Overlay.html'
 
 ], function(classextends, EventEmitter, template){
   
@@ -349,7 +349,7 @@ define('wtwui/lib/Dialog',[
   'wtwui/lib/classextends',
   'wtwui/lib/EventEmitter',
   'wtwui/lib/Overlay',
-  'wtwui/lib/text!wtwui/lib/Dialog/template.html'
+  'wtwui/lib/text!wtwui/lib/templates/Dialog.html'
 
 ], function(classextends, EventEmitter, Overlay, template) {
 
@@ -547,13 +547,13 @@ define('wtwui/lib/Confirmation',[
 
   return Confirmation
 });
-define('wtwui/lib/text!wtwui/lib/Tip/template.html',[],function () { return '<div class="wtwui-tip">\n  <div class="tip"></div>\n  <div class="content"></div>\n</div>';});
+define('wtwui/lib/text!wtwui/lib/templates/Tip.html',[],function () { return '<div class="wtwui-tip">\n  <div class="tip"></div>\n  <div class="content"></div>\n</div>';});
 
 define('wtwui/lib/Tip',[
 
   'wtwui/lib/classextends',
   'wtwui/lib/EventEmitter',
-  'wtwui/lib/text!wtwui/lib/Tip/template.html'
+  'wtwui/lib/text!wtwui/lib/templates/Tip.html'
 
 ], function(classextends, EventEmitter, template) {
 
@@ -798,21 +798,13 @@ define('wtwui/lib/Tip',[
   
   return Tip
 });
-
-define('wtwui',{
-  packages: [
-    'wtwui/lib/Dialog',
-    'wtwui/lib/Confirmation',
-    'wtwui/lib/Overlay',
-    'wtwui/lib/Tip'
-  ]
-},[
+define('wtwui',[
 
   'wtwui/lib/Dialog',
   'wtwui/lib/Confirmation',
   'wtwui/lib/Overlay',
   'wtwui/lib/Tip'
-
+  
 ],function(Dialog, Confirmation, Overlay, Tip) {
   
   return {

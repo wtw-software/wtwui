@@ -15,6 +15,113 @@ $ npm run-script build
 ```
 
 The built files `wtwui-min.js` and `wtwui.css` will be located in the main wtwui folder.
+<pre>
+wtwui/
+|-- wtwui-min.js
+|-- wtwui.css
+</pre>
+
+## Including
+There are multiple ways to include the library in your code:
+
+#### Using the built and minifed files
+```html
+<html>
+<head>
+  <!-- jQuery is a hard dependency-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!-- wtwui css-->
+  <link href="wtwui/wtwui.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script src="wtwui/wtwui-min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      
+      var wtwui = require('wtwui')
+
+      wtwui.dialog('this should work')
+
+      // or
+
+      require('wtwui', function(wtwui){
+        
+        wtwui.dialog('this should allso work!')
+
+      })
+
+    })
+  </script>
+
+</head>
+```
+
+#### Requiering as package with requirejs
+
+```html
+<html>
+<head>
+  <!-- jQuery is a hard dependency-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!-- wtwui css-->
+  <link href="wtwui/wtwui.css" media="screen" rel="stylesheet" type="text/css">
+
+  <!-- this method relies on requirejs -->
+  <script src="wtwui/vendor/require.js"></script>
+
+  <script>
+    require({
+      packages: [
+        {
+          name: 'wtwui',
+          location: 'path/to/wtwui'
+        }
+      ]
+    }, 
+    [
+      'wtwui'
+    ],
+    function(wtwui) {
+      
+      wtwui.dialog('Packages is tha shiez')
+
+    })
+  </script>
+
+</head>
+```
+
+
+You can even require individual modules.
+
+```html
+<script>
+  require({
+    packages: [
+      {
+        name: 'wtwui',
+        location:: 'path/to/wtwui'
+      }
+    ]
+  }, 
+  [
+    'wtwui/lib/Dialog',
+    'wtwui/lib/Tip'
+  ],
+  function(Dialog, Tip) {
+    
+    new Dialog({
+      message: 'yaay'
+    }).show()
+
+    new Tip({
+      content: 'tooltip on a dialog, whaaat?',
+      target: '#target'
+    })
+
+  })
+</script>
+```
 
 ## wtwui.Dialog
 Creating a dialog box can be done using one of two patterns. Dialog class instantiation or functional invocation.
