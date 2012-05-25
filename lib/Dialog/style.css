@@ -141,7 +141,7 @@
 }
 
 .wtwui-dialog {
-  position: absolute!important;
+  position: fixed!important;
   background: white;
   box-shadow: 0px 0px 4px 0px rgba(30,30,30, 0.2);
   border: 1px solid rgba(30,30,30, 0.23);
