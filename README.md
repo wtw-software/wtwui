@@ -152,6 +152,7 @@ new wtwui.Overlay({
 ```
 
 #### With dialog or confirmation
+Overlay can be chained or passed as option into a dialog or confirmation box.
 
 ```javascript
 new wtwui.Dialog({
@@ -171,6 +172,23 @@ new wtwui.Dialog({
   }
 })
 .show()
+
+new wtwui.Dialog({
+  title: 'lol',
+  message: 'haha',
+  overlay: true
+}).show()
+
+new wtwui.Dialog({
+  title: 'Something erroneous has happened',
+  message: 'oh noes',
+  overlay: {
+    css: {
+      background: 'red'
+    }
+  }
+}).show()
+
 ```
 
 #### Custom content

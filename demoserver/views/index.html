@@ -26,7 +26,11 @@
       
       window.wtwui = wtwui
 
-      wtwui.overlay("<p>content</p>")
+      new wtwui.Dialog({
+        title: 'lol',
+        message: 'haha',
+        overlay: true
+      }).show()
       
 
     })
