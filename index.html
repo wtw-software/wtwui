@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wtwui by wtw-software</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Wtwui</h1>
+        <p>Web UI components, gorillastyle</p>
+        <p class="view"><a href="https://github.com/wtw-software/wtwui">View the Project on GitHub <small>wtw-software/wtwui</small></a></p>
+        <ul>
+          <li><a href="https://github.com/wtw-software/wtwui/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/wtw-software/wtwui/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/wtw-software/wtwui">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>wtwui</h1>
+
+<p>Is a ui library with our most commonly used ui gadgets.</p>
+
+<h2>Dependencies</h2>
+
+<p>At the moment you need <code>jquery</code> and <code>requirejs</code> to use the project. There could be an option to build the project without requirejs if the need arises.</p>
+
+<h2>Build</h2>
+
+<p>To build the project you need to have <code>node</code> and <code>npm</code> installed.  </p>
+
+<p>Then run:</p>
+
+<pre><code>$ npm run-script build
+</code></pre>
+
+<p>The built files <code>wtwui-min.js</code> and <code>wtwui.css</code> will be located in the main wtwui folder.</p>
+
+<h2>wtwui.Dialog</h2>
+
+<p>Creating a dialog box can be done using one of two patterns. Dialog class instantiation or functional invocation.</p>
+
+<h4>Creating a Dialog instance</h4>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">dialog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Dialog yeeeeah'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Its slick allright'</span>
+<span class="p">})</span>
+
+<span class="nx">dialog</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'the user was presented a dialog box'</span><span class="p">);</span>
+<span class="p">})</span>
+
+<span class="nx">dialog</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="nx">dialog</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'user closed the dialog'</span><span class="p">);</span>
+<span class="p">})</span>
+
+</pre>
+</div>
+
+
+<h5>Chaining</h5>
+
+<div class="highlight">
+<pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Dialog yeeeeah'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Its slick allright'</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'alerts is so much better!'</span><span class="p">)</span>
+<span class="p">})</span>
+</pre>
+</div>
+
+
+<h4>dialog shorthand</h4>
+
+<p>This function created a new wtwui.Dialog instance and imediatly shows it.</p>
+
+<div class="highlight">
+<pre><span class="nx">wtwui</span><span class="p">.</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'message'</span><span class="p">)</span>
+<span class="nx">wtwui</span><span class="p">.</span><span class="nx">dialog</span><span class="p">(</span><span class="s1">'just a message'</span><span class="p">)</span>
+<span class="nx">wtwui</span><span class="p">.</span><span class="nx">dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'title text'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'using options like a boss'</span>
+<span class="p">})</span>
+</pre>
+</div>
+
+
+<h2>wtwui.Confirmation</h2>
+
+<p>Confirmation boxes are dialogs that gives the user two options: ok or cancel. You can pass most of the same parameters as with dialogs.</p>
+
+<h4>Creating a Confimation instance</h4>
+
+<div class="highlight">
+<pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Confirmation</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Remove user'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Are you sure?'</span><span class="p">,</span>
+  <span class="nx">ok</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">user</span><span class="p">.</span><span class="k">delete</span><span class="p">()</span>
+  <span class="p">},</span>
+  <span class="nx">cancel</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">rollback</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="c1">// or</span>
+
+<span class="kd">var</span> <span class="nx">confirmation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Confirmation</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Remove user'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Are you sure?'</span>
+<span class="p">})</span>
+
+<span class="nx">confirmation</span><span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">user</span><span class="p">.</span><span class="k">delete</span><span class="p">()</span>
+<span class="p">})</span>
+
+<span class="nx">confirmation</span><span class="p">.</span><span class="nx">cancel</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">user</span><span class="p">.</span><span class="nx">rollBack</span><span class="p">()</span>
+<span class="p">})</span>
+
+<span class="nx">confirmation</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</pre>
+</div>
+
+
+<h4>confirm shorthand</h4>
+
+<p>By using the shorthand the confirmation is shown immediately, the function return an instance of wtwui.Confirmation</p>
+
+<div class="highlight">
+<pre><span class="nx">wtwui</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">'Delete user'</span><span class="p">,</span> <span class="s1">'Are you sure'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">ok</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">ok</span><span class="p">)</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">dete</span><span class="p">()</span>
+  <span class="k">else</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">rollback</span><span class="p">()</span>
+<span class="p">})</span>
+
+<span class="c1">// or</span>
+
+<span class="nx">wtwui</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">'Are you sure you wwant to delete the user?'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">ok</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">ok</span><span class="p">)</span>
+    <span class="nx">user</span><span class="p">.</span><span class="k">delete</span><span class="p">()</span>
+  <span class="k">else</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">rollback</span><span class="p">()</span>
+<span class="p">})</span>
+
+<span class="nx">wtwui</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">'Delete user'</span><span class="p">,</span> <span class="s1">'are you sure'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">user</span><span class="p">.</span><span class="k">delete</span><span class="p">()</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">cancel</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">rollback</span><span class="p">()</span>
+  <span class="p">})</span>
+</pre>
+</div>
+
+
+<h2>wtwui.Overlay</h2>
+
+<p>An overlay covers the whole of the user view with a transparent box that you can place some content in. It can allso be used with the dialog of confirmation classes.</p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">overlay</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Overlay</span><span class="p">()</span>
+<span class="nx">overlay</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="c1">// or</span>
+
+<span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Overlay</span><span class="p">({</span>
+  <span class="nx">css</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">background</span><span class="o">:</span> <span class="s1">'red'</span>
+  <span class="p">}</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+</pre>
+</div>
+
+
+<h4>With dialog or confirmation</h4>
+
+<p>Overlay can be chained or passed as option into a dialog or confirmation box.</p>
+
+<div class="highlight">
+<pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Thats right'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'Dialog bitches'</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">overlay</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Something erroneous has happened'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'oh noes'</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">overlay</span><span class="p">({</span>
+  <span class="nx">css</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">background</span><span class="o">:</span> <span class="s1">'red'</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'lol'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'haha'</span><span class="p">,</span>
+  <span class="nx">overlay</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Dialog</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'Something erroneous has happened'</span><span class="p">,</span>
+  <span class="nx">message</span><span class="o">:</span> <span class="s1">'oh noes'</span><span class="p">,</span>
+  <span class="nx">overlay</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">css</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">background</span><span class="o">:</span> <span class="s1">'red'</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+
+</pre>
+</div>
+
+
+<h4>Custom content</h4>
+
+<div class="highlight">
+<pre><span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Overlay</span><span class="p">({</span>
+  <span class="nx">content</span><span class="o">:</span> <span class="s1">'it can take a string'</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Overlay</span><span class="p">({</span>
+  <span class="nx">content</span><span class="o">:</span> <span class="s1">'&lt;p&gt; or html &lt;/p&gt;'</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Overlay</span><span class="p">({</span>
+  <span class="nx">content</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;i&gt; or even an jquery object &lt;/i&gt;'</span><span class="p">)</span>
+<span class="p">}).</span><span class="nx">show</span><span class="p">()</span>
+
+</pre>
+</div>
+
+
+<h2>wtwui.Tip</h2>
+
+<p>Basic vanilla flavoured tooltip.</p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">tip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Tip</span><span class="p">({</span>
+  <span class="nx">content</span><span class="o">:</span> <span class="s1">'tooltip orama'</span><span class="p">,</span>
+  <span class="nx">target</span><span class="o">:</span> <span class="s1">'#tip-target'</span>
+<span class="p">})</span>
+
+<span class="nx">tip</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</pre>
+</div>
+
+
+<h4>Hover</h4>
+
+<p>You can make the tooltip trigger on hover. The hover target defaults to the target assigned to tooltip. Or you can designate a custom target.</p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">tip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">Tip</span><span class="p">({</span>
+  <span class="nx">content</span><span class="o">:</span> <span class="s1">'tooltip orama'</span><span class="p">,</span>
+  <span class="nx">target</span><span class="o">:</span> <span class="s1">'#tip-target'</span>
+<span class="p">})</span>
+
+<span class="nx">tip</span><span class="p">.</span><span class="nx">hover</span><span class="p">()</span>
+<span class="c1">//or</span>
+<span class="nx">tip</span><span class="p">.</span><span class="nx">hover</span><span class="p">(</span><span class="s1">'#another-target'</span><span class="p">)</span>
+</pre>
+</div>
+
+
+<h4>Shorthand</h4>
+
+<p>The shorthand creates a tooltip and show it imediatly, the function return the wtwui.Tip instance.</p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">tip</span> <span class="o">=</span> <span class="nx">wtwui</span><span class="p">.</span><span class="nx">tip</span><span class="p">(</span><span class="s1">'#tip-target'</span><span class="p">,</span> <span class="s1">'tooltip boii'</span><span class="p">)</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">tip</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1">//with hover</span>
+<span class="nx">wtwui</span><span class="p">.</span><span class="nx">tip</span><span class="p">(</span><span class="s1">'#tip-target'</span><span class="p">,</span> <span class="s1">'tooltip boii'</span><span class="p">).</span><span class="nx">hover</span><span class="p">()</span>
+<span class="nx">wtwui</span><span class="p">.</span><span class="nx">tip</span><span class="p">(</span><span class="s1">'#tip-target'</span><span class="p">,</span> <span class="s1">'tooltip boii'</span><span class="p">).</span><span class="nx">hover</span><span class="p">(</span><span class="s1">'#another-target'</span><span class="p">)</span>
+</pre>
+</div>
+
+
+<h2>License</h2>
+
+<p>wtwui uses the MIT license</p>
+
+<pre><code>Copyright (C) &lt;2012&gt; &lt;WTW software AS&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/wtw-software">wtw-software</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
