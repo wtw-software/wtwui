@@ -41,12 +41,22 @@ $(document).ready(function() {
   })
 
   $('#basic-dialog-shorthand').click(function() {
-    wtwui.dialog('title', 'message')
-    wtwui.dialog('just a message')
-    wtwui.dialog({
-      title: 'title text',
-      message: 'using options like a boss'
+    wtwui.Dialog.defaults({
+      effect: 'drop'
     })
+    wtwui.dialog('title', 'message')
+    setTimeout(function() {
+      wtwui.dialog('just a message ')  
+    }, 200)
+    setTimeout(function() {
+      wtwui.dialog({
+        title: 'title text',
+        message: 'using options like a boss'
+      })
+      wtwui.Dialog.defaults({
+        effect: 'scale'
+      })
+    }, 400)  
   })
 
   $('#basic-confirmation').click(function() {
