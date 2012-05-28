@@ -1,0 +1,85 @@
+
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
+
+div.wtwui-damage-number {
+  position: absolute;
+  font: 12px "Press Start 2P";
+  color: #ED8600;
+  text-shadow: 1px 1px 0px #DB5014;
+}
+
+div.wtwui-damage-number.transition {
+  -webkit-transition: opacity 0.4s, top 0.2s, left 0.2s;
+}
+
+div.wtwui-damage-number.crit {
+  font-weight: bold;
+  color: #DB5014;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #CC240A;
+}
+
+div.wtwui-damage-number.dead {
+  font-size: 18px;
+  color: #DB5014;
+  text-shadow: 1px 1px 1px #CC240A;
+}
+
+div.wtwui-damage-number.dead.a {
+  -webkit-transform: rotate(10deg);
+  
+}
+div.wtwui-damage-number.dead.b {
+  -webkit-transform: rotate(-10deg);
+}
+
+
+div.wtwui-health-bar {
+  position: absolute;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #374D38;
+  border-radius: 1px;
+  opacity: 0;
+  height: 4px;
+  -webkit-transition: border-color 0.5s, opacity 0.2s;
+}
+
+div.wtwui-health-bar.active {
+  -webkit-transition: border-color 0.5s, opacity 0.2s;
+  opacity: 1;
+}
+
+div.wtwui-health-bar .bar {
+  height: 100%;
+  width: 100%;
+  background-color: #48944B;
+  -webkit-transition: width 0.2s, background-color 0.5s;
+}
+
+div.wtwui-health-bar.mild-damage {
+  border-color: #C48B10;
+}
+
+div.wtwui-health-bar.mild-damage .bar {
+  background-color: #E6B650;
+}
+
+div.wtwui-health-bar.medium-damage {
+  border-color: #BA671E;
+}
+
+div.wtwui-health-bar.medium-damage .bar {
+  background-color: #D68640;
+}
+
+div.wtwui-health-bar.heavy-damage {
+  border-color: #B04420;
+}
+
+div.wtwui-health-bar.heavy-damage .bar {
+  background-color: #CF4F3C;
+}

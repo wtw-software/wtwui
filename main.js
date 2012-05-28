@@ -3,9 +3,10 @@ define([
   'wtwui/lib/Dialog',
   'wtwui/lib/Confirmation',
   'wtwui/lib/Overlay',
-  'wtwui/lib/Tip'
+  'wtwui/lib/Tip',
+  'wtwui/lib/Crit'
   
-],function(Dialog, Confirmation, Overlay, Tip) {
+],function(Dialog, Confirmation, Overlay, Tip, Crit) {
   
   return {
 
@@ -108,8 +109,9 @@ define([
         }
       },0)
       return tip
-    }
+    },
 
+    Crit: Crit
   }
   
 })

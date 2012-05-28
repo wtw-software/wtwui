@@ -5,6 +5,7 @@
   <link href="gorillatron/progg/wtwui/lib/css/Dialog.css" media="screen" rel="stylesheet" type="text/css">
   <link href="gorillatron/progg/wtwui/lib/css/Overlay.css" media="screen" rel="stylesheet" type="text/css">
   <link href="gorillatron/progg/wtwui/lib/css/Tip.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="gorillatron/progg/wtwui/lib/css/Crit.css" media="screen" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="gorillatron/progg/wtwui/vendor/require.js"> </script>
 
@@ -31,8 +32,11 @@
       new wtwui.Dialog({
         message: 'looool'
       })
-      .show()
       
+      
+      new wtwui.Crit({
+        target: '#tip-target'
+      })
 
     })
   </script>
@@ -40,7 +44,7 @@
 </head>
 <body>
 
-  <div id="tip-target" style="border: 1px solid gray; width: 500px; height: 50px; margin: 500px 0px 0px 500px"></div>
+  <div id="tip-target" style="border: 1px solid gray; width: 200px; height: 50px; margin: 500px 0px 0px 500px"></div>
   <div style="height: 2400px"></div>
 
 </body>
