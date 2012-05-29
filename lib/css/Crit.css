@@ -9,7 +9,11 @@ div.wtwui-damage-number {
 }
 
 div.wtwui-damage-number.transition {
+  -moz-transition: opacity 0.4s, top 0.2s, left 0.2s;
+  -o-transition: opacity 0.4s, top 0.2s, left 0.2s;
+  -ms-transition: opacity 0.4s, top 0.2s, left 0.2s;
   -webkit-transition: opacity 0.4s, top 0.2s, left 0.2s;
+  transition: opacity 0.4s, top 0.2s, left 0.2s;
 }
 
 div.wtwui-damage-number.crit {
@@ -26,11 +30,19 @@ div.wtwui-damage-number.dead {
 }
 
 div.wtwui-damage-number.dead.a {
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
   
 }
 div.wtwui-damage-number.dead.b {
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
 
@@ -45,11 +57,14 @@ div.wtwui-health-bar {
   border-radius: 1px;
   opacity: 0;
   height: 4px;
+  -o-transition: border-color 0.5s, opacity 0.2s;
+  -ms-transition: border-color 0.5s, opacity 0.2s;
+  -moz-transition: border-color 0.5s, opacity 0.2s;
   -webkit-transition: border-color 0.5s, opacity 0.2s;
+  transition: border-color 0.5s, opacity 0.2s;
 }
 
 div.wtwui-health-bar.active {
-  -webkit-transition: border-color 0.5s, opacity 0.2s;
   opacity: 1;
 }
 
@@ -57,7 +72,11 @@ div.wtwui-health-bar .bar {
   height: 100%;
   width: 100%;
   background-color: #48944B;
+  -o-transition: width 0.2s, background-color 0.5s;
+  -ms-transition: width 0.2s, background-color 0.5s;
+  -moz-transition: width 0.2s, background-color 0.5s;
   -webkit-transition: width 0.2s, background-color 0.5s;
+  transition: width 0.2s, background-color 0.5s;
 }
 
 div.wtwui-health-bar.mild-damage {
