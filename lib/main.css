@@ -1,3 +1,4 @@
-@import url('Dialog/style.css');
-@import url('Overlay/style.css');
-@import url('Tip/style.css');
+@import url('css/Dialog.css');
+@import url('css/Overlay.css');
+@import url('css/Tip.css');
+@import url('css/Crit.css');
