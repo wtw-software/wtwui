@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 .wtwui-element {
   font: 14px/1.6 'Helvetica Neue', Helvetica, arial, sans-serif;
   color: #3a3a3a;
@@ -222,7 +222,6 @@
 .wtwui-tip .tip.south.west {
   right: 20px;
 }
-@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 div.wtwui-damage-number {
   position: absolute;
   font: 12px "Press Start 2P";
