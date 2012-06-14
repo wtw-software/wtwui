@@ -24,6 +24,9 @@ wtwui/
 There are multiple ways to include the library in your code:
 
 #### Using the built and minifed files
+
+This puts wtwui as a object on global namespace.
+
 ```html
 <html>
 <head>
@@ -37,8 +40,6 @@ There are multiple ways to include the library in your code:
   <script>
     $(document).ready(function(){
       
-      var wtwui = require('wtwui')
-
       wtwui.dialog('this should work')
 
       // or
