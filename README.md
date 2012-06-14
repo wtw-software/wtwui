@@ -1,4 +1,3 @@
-
 # wtwui
 Is a ui library with our most commonly used ui gadgets.
 
@@ -349,7 +348,9 @@ wtwui.tip('#tip-target', 'tooltip boii').hover('#another-target')
 ```
 
 
+## Credits
 
+The style is heavily influenced by uikit by visionmedia/Tj.
 
 ## License
 wtwui uses the MIT license
