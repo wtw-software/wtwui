@@ -29,15 +29,27 @@
       ], 
     function(wtwui, Dialog) {
       
-      new wtwui.Dialog({
-        message: 'looool'
-      })
       
-      
-      new wtwui.Crit({
-        target: '#tip-target',
-        deadText: 'Deleted!'
+
+      var c = new wtwui.Confirmation({
+        message: 'looool',
+        effect: 'drop',
+        ok: {
+          title: 'okaaau',
+          callback: function() {
+            alert('o')
+          }
+        },
+        cancel: {
+          title: 'NOOES',
+          callback: function() {
+            alert('C')
+          }
+        }
       })
+
+      c.show()
+   
 
     })
   </script>
