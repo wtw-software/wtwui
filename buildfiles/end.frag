@@ -1,1 +1,4 @@
-})(this)
+
+  window.wtwui = require('wtwui')
+
+}).call({})

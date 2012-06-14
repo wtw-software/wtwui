@@ -1,10 +1,10 @@
-;(function(context) {
+;(function() {
 
-if(!context.require && !context.define) {
+
   
   var modules = {}
 
-  context.define = function(){
+  var define = function(){
     var name, packages, deps, definition
     if(arguments.length === 3) {
       name = arguments[0]
@@ -29,7 +29,7 @@ if(!context.require && !context.define) {
     }
   }
 
-  context.require = function(deps, fn){
+  var require = function(deps, fn){
     var dependencies = []
     if(typeof deps === 'string') {
       dependencies.push(modules[deps])
@@ -51,5 +51,4 @@ if(!context.require && !context.define) {
     }
   }
 
-  require.config = function(){}
-}
+  var config = function(){}
