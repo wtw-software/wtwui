@@ -120,11 +120,11 @@
   border: 1px solid #DFDFDF;
   background: white;
   box-shadow: 1px 1px 0px 0px rgba(20,20,20, 0.3);
-  margin: 10px 15px 10px 0px;
+  margin: 10px 0px 10px 5px;
 }
 
 .wtwui-element .buttons .button.cancel {
-  
+  margin-right: 10px;
 }
 
 .wtwui-element .buttons button:active {
