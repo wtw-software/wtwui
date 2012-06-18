@@ -6,7 +6,7 @@
   "main": "./main.js",
   "repository": {
     "type": "git",
-    "https://github.com/wtw-software/wtwui"
+    "url": "https://github.com/wtw-software/wtwui"
   },
   "dependencies": {},
   "devDependencies": {
