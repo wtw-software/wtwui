@@ -4,6 +4,10 @@
   "description": "WtW UI components gorillastyle",
   "version": "0.0.2",
   "main": "./main.js",
+  "repository": {
+    "type": "git",
+    "https://github.com/wtw-software/wtwui"
+  },
   "dependencies": {},
   "devDependencies": {
     "jasmine-node": "1.0.17 "
