@@ -10,7 +10,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "jasmine-node": "1.0.17 "
+    "jasmine-node": "1.0.17 ",
+    "brfs": "~0.1.0"
   },
   "scripts": {
     "test": "jasmine-node ./tests",
