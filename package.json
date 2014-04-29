@@ -3,7 +3,7 @@
   "name": "wtwui",
   "description": "WtW UI components gorillastyle",
   "version": "0.0.2",
-  "main": "./main.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/wtw-software/wtwui"
