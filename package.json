@@ -2,7 +2,7 @@
   "author": "Jørn Andre Tangen <jornandretangen@gmail.com>",
   "name": "wtwui",
   "description": "WtW UI components gorillastyle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./index.js",
   "repository": {
     "type": "git",
